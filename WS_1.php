@@ -51,10 +51,18 @@ echo "JSON array format<br>";
 echo var_dump($jmperezperez_json),"<br>";
 echo print_r($jmperezperez_json), "<br>";
 
-$php_array = array(true, false, false);
+$elements_3='{
+  "jmperezperez": true,
+  "thelinmichael": false,
+  "wizzler": false
+}';
+echo "3 elements string format<br>";
+echo var_dump($elements_3),"<br>";
+echo print_r($elements_3), "<br>";
 
-echo "PHP array<br>";
-echo var_dump($php_array),"<br>";
-echo print_r($php_array),"<br>";
+$result_arr_ass = json_decode($elements_3, true);
+echo "jmperezperez ",$result_arr_ass["jmperezperez"],"<br>";
+echo "thelinmichael ",$result_arr_ass["thelinmichael"],"<br>";
+echo "wizzler ",$result_arr_ass["wizzler"],"<br>";
 
 ?>
